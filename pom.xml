@@ -48,6 +48,7 @@
         <directory>${basedir}</directory>
         <includes>
           <include>readme.txt</include>
+          <include>versions.txt</include>
         </includes>
       </resource>
     </resources>
