@@ -71,7 +71,6 @@ public class Testing {
 		if(file == null){
 			System.err.println("[ERROR] File must not be null");
 		}else {
-			System.out.println("Opening " + file.getAbsolutePath() + ", please wait.");
 			try {
 				Desktop.getDesktop().open(file);
 			} catch (IOException e) {
