@@ -21,6 +21,8 @@
 #
 #    生成 idea 项目： mvn idea:idea
 #	
-#    demo 项目地址：https://github.com/fancore/fan-core-demo
+#    demo ：https://github.com/fancore/fan-core-demo
+#	
+#    jar & javadoc ：https://github.com/fancore/fan-core-release
 #	
 ##########################################################################################
