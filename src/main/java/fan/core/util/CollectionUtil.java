@@ -200,7 +200,8 @@ public class CollectionUtil {
 	}
 	
 	/**
-	 * <p><des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型 </des></p>
+	 * <p><des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型 
+	 * 特别说明, 中文排序不太准确, 常用汉字排序可用, 若要求中文严格排序, 建议不要使用 </des></p>
 	 * <p><pre>
 	 * <b><em>Definition Class：</em></b>
 	 * 
@@ -276,7 +277,8 @@ public class CollectionUtil {
 
 	
 	/**
-	 * <p><des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型 </des></p>
+	 * <p><des> 根据关键字排序集合, 关键字类型支持常用的数值类型, 字符类型, 布尔类型, 日期类型 
+	 * 特别说明, 中文排序不太准确, 常用汉字排序可用, 若要求中文严格排序, 建议不要使用 </des></p>
 	 * <p><pre>
 	 * <b><em>Definition Class：</em></b>
 	 * 
@@ -415,7 +417,7 @@ public class CollectionUtil {
 				case NUMBER :
 					return numberCompare(value(o1), value(o2));
 				case STRING :
-					return StringCompare(value(o1), value(o2));
+					return stringCompare(value(o1), value(o2));
 				case CHAR:
 					return charCompare(value(o1), value(o2));
 				case BOOL:
@@ -434,7 +436,7 @@ public class CollectionUtil {
 		}
 
 		/** <p><des> 比较两个字符类串型关键字的大小 </des></p> */
-		private int StringCompare(Object o1, Object o2) {
+		private int stringCompare(Object o1, Object o2) {
 			String s1 = StringUtil.getStringISO1(StringUtil.getBytesGBK(o1.toString()));
 			String s2 = StringUtil.getStringISO1(StringUtil.getBytesGBK(o2.toString()));
 			return isAsc ? s1.compareTo(s2) : s2.compareTo(s1);
