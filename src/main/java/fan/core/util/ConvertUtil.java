@@ -4,7 +4,6 @@ import java.nio.charset.Charset;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import fan.core.util.code.EncodingCode;
 /**
  * <p> <b> @描述：</b> 
@@ -75,6 +74,19 @@ public class ConvertUtil {
 		}
 		// undefined
 		return value;
+	}
+	
+	/**
+	 * <p><des> 转换字符串为指定类型的值 </des></p>
+	 * @see fan.core.util.ConvertUtil#objectValue(String, Class)
+	 * @since 0.1.0
+	 */
+	public static Object[] objectValues(String[] values, Class<?>[] types){
+		Object[] target = new Object[values.length];
+		for(int i = 0; i < values.length; i++){
+			target[i] = objectValue(values[i], types[i]);
+		}
+		return target;
 	}
 	
 	// the following method is too simple and there is nothing to describe
