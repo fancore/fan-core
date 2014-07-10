@@ -96,19 +96,19 @@ public class Json {
 	}
 	
 	/**
-	 * <p><des> 写出JSON字符串 </des></p>
+	 * <p><des> 写出对象 </des></p>
 	 * @param value  需要序列化成JSON字符串写出的对象
 	 * @param response  HttpServletResponse
 	 * @see fan.core.json.Json#toJson(Object)
 	 * @see fan.core.json.Json#toWriteOut(String, HttpServletResponse)
 	 * @since 0.2.0
 	 */
-	public void toWriteOut(Object value, HttpServletResponse response) {
-		Json.toWriteOut(toJson(value), response);
+	public void outputObject(Object value, HttpServletResponse response) {
+		Json.outputJson(toJson(value), response);
 	}
 	
 	/**
-	 * <p><des> 写出JSON字符串 </des></p>
+	 * <p><des> 写出对象 </des></p>
 	 * @param key  键值
 	 * @param value  需要序列化成JSON字符串写出的对象
 	 * @param response  HttpServletResponse
@@ -116,8 +116,8 @@ public class Json {
 	 * @see fan.core.json.Json#toWriteOut(String, HttpServletResponse)
 	 * @since 0.2.0
 	 */
-	public void toWriteOut(String key, Object value, HttpServletResponse response) {
-		Json.toWriteOut(toJson(key, value), response);
+	public void outputObject(String key, Object value, HttpServletResponse response) {
+		Json.outputJson(toJson(key, value), response);
 	}
 	
 	/**
@@ -126,7 +126,7 @@ public class Json {
 	 * @param response  HttpServletResponse
 	 * @since 0.2.0
 	 */
-	public static void toWriteOut(String json, HttpServletResponse response) {
+	public static void outputJson(String json, HttpServletResponse response) {
 		response.setContentType("text/html;charset=utf-8");
 		response.setHeader("Pragma", "no-cache");
 		response.setHeader("Cache-Control", "no-cache");
